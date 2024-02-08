@@ -1,11 +1,13 @@
-# typescript-sandbox
+# Laboratorio 11B - Expresiones regulares
 
-Para la parte de cada módulo en la que te planteamos ejercicios con JavaScript puedes usar este sandbox.
+Crea una aplicación con un textarea y un botón de "extraer enlaces a imágenes".
 
-Pasos:
+Cuando se pincha en el botón extrae los enlaces a las imágenes que haya en el textarea y las muestra en pantalla.
 
-- Clonate el proyecto.
-- Instala las dependencias con `npm install`.
-- Ejecuta el sandbox con `npm run dev`.
-- Abre el navegador en `http://localhost:5173/` (si ese puerto no te funciona, mira en la consola donde has hecho el build, puede que este ocupado y se haya abierto en otro puerto).
-- Puedes empezar a meter tu código en el fichero:
+Es decir:
+
+- Busca todos los tags img
+- Por cada tag busca el atributo src
+- Muestra el contenido en enlace a la imagen que hay dentro del SRC.
+
+Apartado opcional: Puedes también mostrar las imágenes en un CSS Grid o un contendor Flexbox.
