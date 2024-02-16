@@ -9,11 +9,13 @@ export const limpiarContenedorImagenes = (contenedor: HTMLElement): void => {
 
 export const extraerSrcImg = (coincidencia: string): string => {
     const coincidenciaSrc = coincidencia.match(/src\s*=\s*['"]([^'"]+)['"]/) as any;
-    return coincidenciaSrc 
+    return coincidenciaSrc;
 };
 
 export const crearYAgregarImagen = (src: string, contenedor: HTMLElement): void => {
-    const elementoImg: HTMLImageElement = document.createElement("img");
-    elementoImg.src = src;
-    contenedor.appendChild(elementoImg);
+    const elementoImg = document.createElement("img");
+    if (elementoImg !== null && elementoImg !== undefined && elementoImg instanceof HTMLImageElement) {
+        elementoImg.src = src;
+        contenedor.appendChild(elementoImg);
+    }
 };
