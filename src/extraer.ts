@@ -6,7 +6,7 @@ import {
 } from "./extraer.helper"
 
 const botonExtraer = document.getElementById("botonExtraer");
-const inputHTML = document.getElementById("inputHTML");
+const textArea = document.getElementById("textArea");
 const contenedorImagenes = document.getElementById("contenedorImagenes");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const handlerClick = () => {
-    if (inputHTML !== null && inputHTML !== undefined && inputHTML instanceof HTMLInputElement &&
+    if (textArea !== null && textArea !== undefined && textArea instanceof HTMLTextAreaElement &&
         contenedorImagenes !== null && contenedorImagenes !== undefined) {
 
-        const contenidoHTML = inputHTML.value;
+        const contenidoHTML = textArea.value;
         const coincidenciasImg: RegExpMatchArray = extraerCoincidenciasImg(contenidoHTML) as any;
         limpiarContenedorImagenes(contenedorImagenes);
 
